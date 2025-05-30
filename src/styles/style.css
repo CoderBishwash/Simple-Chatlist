@@ -1,0 +1,308 @@
+@import url("themes.css");
+
+section{
+    background-color: var(--chat-white);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--chat-strong-black);
+    box-shadow: 0px 5px 6px var(--chat-shadow);
+    width: 350px;
+    height: 600px;
+    border-radius: 20px;
+    gap: 30px;
+    position: relative;
+}
+div.header div.right-side{
+    display: flex;
+    gap: 10px;
+}
+section div.right-side img{
+    display: none;
+}
+section div.header div.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+section div.header span{
+    font-size: 18pt;
+    font-weight: 800;
+}
+section div.header div.left-side{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+section div.header div.left-side span{
+    font-size: 18px;
+    cursor: pointer;
+}
+div.left-side img:hover {
+    cursor: pointer;
+    background-color: var(--chat-soft-white);
+    border-radius: 50%;
+}
+section div.header div.searchbar{
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    background-color: var(--chat-soft-white);
+    border-radius: 20px;
+    width: 90%;
+    margin: 0px auto;
+}
+section div.header div.searchbar input{
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+div.chat-lists ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 450px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-left: 25px;
+    position: relative;
+}
+div.edit{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: var(--chat-white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 55px;
+    border: 1px solid var(--chat-soft-black);
+    box-shadow: 0px 2px 2px var(--chat-shadow);
+}
+div.delete{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: var(--chat-white);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    border: 1px solid var(--chat-soft-black);
+    box-shadow: 0px 2px 2px var(--chat-shadow);
+}
+div.chat-lists ul li:hover div.delete{
+    display: flex;
+}
+div.chat-lists ul li:hover div.edit{
+    display: flex;
+}
+ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    background-color: var(--chat-white);
+    border-radius: 50px;
+    transition: ease .3s;
+}
+div.chat-lists ul li:hover{
+    cursor: pointer;
+    background-color: var(--chat-soft-white); 
+}
+ul li div.letter{
+    width: 60px;
+    height: 60px;
+    background-color: var(--chat-soft-black);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li div.letter span{
+    color: var(--chat-black);
+    font-size: 20px;
+    font-weight: 700;
+}
+ul li div.infos{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    gap: 10px;
+}
+ul li div.infos h3{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--chat-black);
+}
+ul li div.infos p{
+    font-size: 10pt;
+    color: var(--chat-strong-black);
+}
+div.adduser{
+    position: absolute;
+    top: 150px;
+    left: -10px;
+    background-color: var(--chat-white);
+    padding: 20px;
+    border: 2px solid var(--chat-soft-black);
+    z-index: 2;
+    box-shadow: 0px 5px 6px var(--chat-shadow);
+    width: 370px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+div.adduser div.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.adduser div.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div.adduser div.bottom input{
+    padding: 5px 10px;
+    border: 1px solid var(--chat-strong-black);
+    outline: none;
+    background-color: var(--chat-soft-white);
+    border-radius: 5px;
+}
+div.adduser div.btns{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+label{
+    font-size: 13pt;
+    color: var(--chat-black);
+}
+div.adduser div.btns #btn1{
+    padding: 5px;
+    background-color: var(--chat-primary-button);
+    color: var(--chat-white);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+div.adduser div.btns #btn2{
+    padding: 5px;
+    background-color: var(--chat-soft-black);
+    color: var(--chat-black);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+div.adduser div.top img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--chat-white);
+}
+div.adduser div.top img:hover{
+    cursor: pointer;
+    background-color: var(--chat-soft-white);
+}
+div.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: var(--chat-overlay);
+    backdrop-filter: blur(1px);
+}
+div.empty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 42%;
+    left: 25%;
+}
+
+div.edituser{
+    position: absolute;
+    top: 150px;
+    left: -10px;
+    background-color: var(--chat-white);
+    padding: 20px;
+    border: 2px solid var(--chat-soft-black);
+    z-index: 2;
+    box-shadow: 0px 5px 6px var(--chat-shadow);
+    width: 370px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+div.edituser div.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.edituser div.bottom{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+div.edituser div.bottom input{
+    padding: 5px 10px;
+    border: 1px solid var(--chat-strong-black);
+    outline: none;
+    background-color: var(--chat-soft-white);
+    border-radius: 5px;
+}
+div.edituser div.btns{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+label{
+    font-size: 13pt;
+    color: var(--chat-black);
+}
+div.edituser div.btns #btn1{
+    padding: 5px;
+    background-color: var(--chat-primary-button);
+    color: var(--chat-white);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+div.edituser div.btns #btn2{
+    padding: 5px;
+    background-color: var(--chat-soft-black);
+    color: var(--chat-black);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+div.edituser div.top img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--chat-white);
+}
+div.edituser div.top img:hover{
+    cursor: pointer;
+    background-color: var(--chat-soft-white);
+}
